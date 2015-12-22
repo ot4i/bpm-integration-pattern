@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de-de" xml:lang="de-de">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+    <title>Übersicht über das Muster 'BPM Integration Service'</title>
+</head>
+    <body>
+        <h1 class="topictitle1">Muster 'BPM Integration Service'</h1>
+        <div>
+            <p class="shortdesc"></p>
+        </div>
+        <p>Mit diesem Muster können Sie einen IBM Business Process Manager-Integrationsservice (BPM-Integrationsservice) mit einem IBM Integration Bus-Service integrieren.</p>
+        
+        <div class="section">
+            <h2 class="sectiontitle">Lösung</h2>
+        </div>
+        
+        <p>Mit diesem Muster können Sie einen neuen IBM Integration Bus-Service generieren, der von IBM Business Process Manager aufgerufen werden kann.
+</p>
+		<p>Lesen Sie vor Verwendung dieses Musters die Informationen zu IBM Business Process Manager im Information Center von IBM Integration Bus; siehe <a class="xref" href="../../com.ibm.etools.mft.doc/bz49020_.htm" title="Mit Business Process Manager arbeiten">Mit Business Process Manager arbeiten</a>
+		</p>
+		
+<div class="image">		
+<img src="../images/BPMpatterndiag1.gif" alt="Workflow-Diagramm zum Muster 'BPM Integration Service'"/>
+</div>
+<p>Die Entwickler von BPM und IBM Integration Bus arbeiten gemeinsam an der Integration eines IBM BPM-Integrationsservice in Verbindung mit einem IBM Integration Bus-Service, indem sie folgende Schritte ausführen:</p> 
+<p>Zuerst muss der BPM-Entwickler die folgenden Tasks ausführen:
+</p><ol>
+<li>Er muss mithilfe eines BPM-Toolkits den BPM-Integrationsservice erstellen oder angeben, der den IBM Integration Bus-Service aufrufen muss.</li>
+<li>Er muss eine BPM-Exportdatei (Datei mit der Erweiterung <span class="filepath">.twx</span>) erstellen, die mindestens einen Integrationsservice mit definierten Ein- und Ausgabevariablen enthält. </li></ol>
+<p>Anschließend muss der IBM Integration Bus-Entwickler die folgenden Tasks ausführen:
+</p><ol>
+<li>Er muss eine neue Musterinstanz generieren, indem er den erforderlichen BPM-Integrationsservice in der Datei mit der Erweiterung <span class="filepath">.twx</span> auswählt.
+<p>
+Der generierte Integration Bus-Service enthält eine Serviceschnittstelle (WSDL-Datei) mit einer Operation, deren Eingaben und Ausgaben denjenigen der BPM-Integrationsservicedefinition entsprechen.</p></li>
+<li>Er muss den IBM Integration Bus-Service entwickeln, den Service auf einem Integrationsknoten (Broker) implementieren und prüfen, ob der Service ordnungsgemäß funktioniert.</li>
+<li>Er muss den Service als neue Datei (<span class="filepath">.twx</span>) exportieren.</li>
+<p>Die neue Datei mit der Erweiterung <span class="filepath">.twx</span> enthält Details zum neuen Service in Form einer Implementierung einer BPM-Web-Service-Integration, die die Service-URL und die entsprechende Geschäftsobjektzuordnung enthält.
+</p>
+</ol>
+<p>Schließlich muss der BPM-Entwickler die folgenden Tasks ausführen:
+</p>
+<ol>
+<li>Er muss die neue Datei (<span class="filepath">.twx</span>) mit dem BPM-Toolkit importieren, das für die Erstellung des BPM-Integrationsservice verwendet wurde.
+</li>
+<p>Der BPM-Integrationsservice wird aktualisiert und enthält jetzt die Details des IBM Integration Bus-Service. Der BPM-Integrationsservice kann jetzt den IBM Integration Bus-Service aufrufen.
+</p></ol>
+
+<br />
+
+
+<p>In den folgenden Abschnitten finden Sie Informationen zur Anwendung und Verwendung dieses Musters.
+</p>
+		<div class="familylinks">
+			<a name="anchorBack"></a>
+			<div class="section">
+				<h2 class="sectiontitle">Verwandte Tasks</h2>
+			</div>
+		</div>
+		
+		<div>
+			<a href="before.htm">Erforderliche Tasks vor der Anwendung des Musters</a>
+		</div>
+		<div>
+			<a href="Configure.htm">Muster anwenden und konfigurieren</a>
+		</div>
+		<div>
+			<a href="parameters.htm">Parameter für das Muster</a>
+		</div>
+		<div>
+			<a href="constraint.htm">Einschränkungen bei der Verwendung des Musters</a>
+		</div>
+		<div>
+			<a href="after.htm">Erforderliche Tasks nach der Generierung des Musters</a>
+		</div>
+    </body>
+</html>

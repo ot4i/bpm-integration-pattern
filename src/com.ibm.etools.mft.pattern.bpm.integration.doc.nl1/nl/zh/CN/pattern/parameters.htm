@@ -1,0 +1,347 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh" xmlns="http://www.w3.org/1999/xhtml" xml:lang="zh-cn">
+<head>
+	<!--
+		(c) Copyright IBM Corporation 2009, 2012. All rights reserved.
+		All Rights Reserved * Licensed Materials - Property of IBM 
+	-->
+
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	<meta name="abstract" content="包含 BPM Integration Service 模式的模式参数详细信息的表"/>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+	<link rel="stylesheet" type="text/css" href="../css/general.css"/>
+	<title>BPM Integration Service 模式的模式参数</title>	
+	<script language="JavaScript" src="../help/actions.js"></script>
+	
+	<!-- START NON-TRANSLATABLE -->
+	<script language="JavaScript">
+	<!--
+
+	function getParameter(location, name) {
+		name = name.replace(/[\[]/,"\\\[").replace(/[\]]/,"\\\]");
+		var search = "[\\?&]" + name + "=([^&#]*)";
+		var regex = new RegExp(search);
+		var results = regex.exec(location);
+		return (results == null ? true : (results[1] == "false" ? false : true));
+	}
+	
+	function addStyleSheet() {
+		if (getParameter(window.location.href, "everything") == false) {
+			var headId = document.getElementsByTagName("head")[0];         
+			var cssNode = document.createElement("link");
+			cssNode.type = "text/css";
+			cssNode.rel = "stylesheet";
+			cssNode.href = "../css/patterns.css";
+			cssNode.media = "screen";
+			headId.appendChild(cssNode);
+		}
+	}
+		
+	addStyleSheet(); // Depends on the query string!
+	
+	function getElementsByStyleClass (className) {
+  		var all = document.all ? document.all :
+    	document.getElementsByTagName('*');
+  		var elements = new Array();
+  		
+  		for (var e = 0; e < all.length; e++) {
+    		if (all[e].className == className) {
+      			elements[elements.length] = all[e];
+      		}
+      	}
+ 		return elements;
+	}
+	
+	function collapseAll() {
+		var elements = getElementsByStyleClass('twisty');
+		for (var e = 0; e < elements.length; e++) {
+			changeTwisty(elements[e], 'TWISTIE.COLLAPSEALL');
+		}
+	}
+	
+	function expandAll() {
+		var elements = getElementsByStyleClass('twisty');
+		for (var e = 0; e < elements.length; e++) {
+			changeTwisty(elements[e], 'TWISTIE.EXPANDALL');
+		}
+	}
+	
+	function toggleTwisty(group) {
+		changeTwisty(group, 'TWISTIE.TOGGLE');
+		if (typeof kc === "object" && typeof kc.resize === "function") kc.resize();
+	}
+
+	function changeTwisty(group, mode) {		
+		whichGroupId = group.parentNode.id;
+
+		whichGroupContainerId = whichGroupId + "Container";
+		whichGroupTwistyId = whichGroupId + "Twisty";
+		whichGroupTwistyImageId = whichGroupId + "Arrow";
+		groupContainerObj = document.getElementById(whichGroupContainerId);
+		twistyArrowContainerObj = document.getElementById(whichGroupTwistyId);
+		twistyArrowImageObj = document.getElementById(whichGroupTwistyImageId);
+		group.parentNode.style.height = "auto";
+
+		var toShow = false;
+		
+		if (mode == 'TWISTIE.TOGGLE') {
+			if (groupContainerObj.style.display == "none" || groupContainerObj.style.display == "") {
+				toShow = true;
+			} else {
+				toShow = false;
+			}
+		} else if (mode == 'TWISTIE.EXPANDALL') {
+			toShow = true;
+		}
+		
+		if (toShow) {
+			groupContainerObj.style.visibility = "visible";
+			groupContainerObj.style.display = "block";
+			twistyArrowImageObj.src = '../images/twistyopen.png'
+			group.parentNode.style.height = (groupContainerObj.offsetHeight + 30) +'px'; 
+	
+		} else {
+			groupContainerObj.style.visibility = "hidden";
+			groupContainerObj.style.display = "none";
+			twistyArrowImageObj.src = '../images/twistyclosed.png'
+		}
+	
+	}
+	//-->
+	</script>
+	<!-- END NON-TRANSLATABLE -->
+</head>
+<body id="com.ibm.etools.mft.pattern.bpm.integration.pattern.parametertable">
+	<!-- Page main title -->
+  	<div id="title" class="invisible">
+		<h1 class="patterns-title"><span>BPM Integration Service</span> 模式的参数</h1>
+  	</div>
+
+
+		
+			<div class="box first">
+				<div class="TitleBox"><!-- --></div>
+				<div class="FooterBox"><!-- --></div>
+				<div class="TL"><!-- --></div>
+				<div class="TR"><!-- --></div>
+				<div class="BL"><!-- --></div>
+				<div class="BR"><!-- --></div>
+				<div class="ContentBox">
+					<div class="border">
+						<div class="groupBox" id="Id1399d0578e2e91c82f2137046d7">
+							<div class="twisty" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" role="menubar" id="Id1399d0578e2e91c82f2137046d7Twisty">
+								<img src="../images/twistyclosed.png"
+									name="b" id="Id1399d0578e2e91c82f2137046d7Arrow" alt=""></img>
+							</div>
+							<div class="twistyTitle" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" tabindex="0" role="menubar">模式名</div>
+							
+							
+
+									
+							
+							<div style="visibility: hidden; display: none;" class="groupBoxContainer" id="Id1399d0578e2e91c82f2137046d7Container">
+									<div class="tablenoborder">
+										<table summary="" width="100%" border="1" cellpadding="4" cellspacing="0" frame="border" rules="all">
+											<thead align="left">
+												<tr>
+													  <th class="firstcol" align="left" valign="top" width="*">模式参数</th>
+													  <th valign="top" width="*" class="invisible">M</th>
+								                      <th valign="top" width="*" class="invisible">C</th>
+													  <th class="invisible" valign="top" width="*">缺省值</th>
+													  <th valign="top" width="*">描述
+</th>
+												</tr>
+											</thead>
+											<tbody>
+
+														<tr>
+															<th align="left" valign="top" width="*" class="firstcol">
+																模式实例名称</th>
+															<td valign="top" width="*" class="invisible">是
+</td>
+									                        <td valign="top" width="*" class="invisible">否
+</td>
+									                        <td valign="top" width="*" class="invisible">&nbsp;</td>
+															<td valign="top" width="*">
+																<p>这是一个唯一名称，用于标识模式实例在模式实例项目下生成的所有工件。</p>
+															</td>
+														</tr>
+											</tbody>
+										</table>
+								  	</div>
+								
+
+						  	</div>
+				  		</div>
+			  		</div>
+				</div>
+			</div>
+
+	
+				
+	
+		
+
+			
+	
+			<div class="box first">
+				<div class="TitleBox"><!-- --></div>
+				<div class="FooterBox"><!-- --></div>
+				<div class="TL"><!-- --></div>
+				<div class="TR"><!-- --></div>
+				<div class="BL"><!-- --></div>
+				<div class="BR"><!-- --></div>
+				<div class="ContentBox">
+					<div class="border">
+						<div class="groupBox" id="Id1399d0578e2e91c82f2137046d6">
+							<div class="twisty" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" role="menubar" id="Id1399d0578e2e91c82f2137046d6Twisty">
+								<img src="../images/twistyclosed.png"
+									name="b" id="Id1399d0578e2e91c82f2137046d6Arrow" alt=""></img>
+							</div>
+							<div class="twistyTitle" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" tabindex="0" role="menubar">BPM</div>
+							
+							
+
+									
+							
+							<div style="visibility: hidden; display: none;" class="groupBoxContainer" id="Id1399d0578e2e91c82f2137046d6Container">
+									<div class="tablenoborder">
+										<table summary="" width="100%" border="1" cellpadding="4" cellspacing="0" frame="border" rules="all">
+											<thead align="left">
+												<tr>
+													  <th class="firstcol" align="left" valign="top" width="*">模式参数</th>
+													  <th valign="top" width="*" class="invisible">M</th>
+								                      <th valign="top" width="*" class="invisible">C</th>
+													  <th class="invisible" valign="top" width="*">缺省值</th>
+													  <th valign="top" width="*">描述
+</th>
+												</tr>
+											</thead>
+											<tbody>
+
+														<tr>
+															<th align="left" valign="top" width="*" class="firstcol">
+																BPM Integration Service
+															</th>
+															<td valign="top" width="*" class="invisible">是
+</td>
+									                        <td valign="top" width="*" class="invisible">是
+</td>
+									                        <td valign="top" width="*" class="invisible">&nbsp;</td>
+																				
+															
+															<td valign="top" width="*">
+																<p>这是 Integration Bus 服务所要实现的 BPM Integration Service。</p>
+															</td>
+														</tr>
+											</tbody>
+										</table>
+								  	</div>
+								
+
+						  	</div>
+				  		</div>
+			  		</div>
+				</div>
+			</div>
+
+	
+
+			
+
+			
+	
+			<div class="box first">
+				<div class="TitleBox"><!-- --></div>
+				<div class="FooterBox"><!-- --></div>
+				<div class="TL"><!-- --></div>
+				<div class="TR"><!-- --></div>
+				<div class="BL"><!-- --></div>
+				<div class="BR"><!-- --></div>
+				<div class="ContentBox">
+					<div class="border">
+						<div class="groupBox" id="Id1399d0f1b22f4426ec2ec189952">
+							<div class="twisty" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" role="menubar" id="Id1399d0f1b22f4426ec2ec189952Twisty">
+								<img src="../images/twistyclosed.png"
+									name="b" id="Id1399d0f1b22f4426ec2ec189952Arrow" alt=""></img>
+							</div>
+							<div class="twistyTitle" onmouseup="toggleTwisty(this)" onkeyup="toggleTwisty(this)" tabindex="0" role="menubar">服务信息
+</div>
+							
+							
+
+									
+
+									
+							
+							<div style="visibility: hidden; display: none;" class="groupBoxContainer" id="Id1399d0f1b22f4426ec2ec189952Container">
+									<div class="tablenoborder">
+										<table summary="" width="100%" border="1" cellpadding="4" cellspacing="0" frame="border" rules="all">
+											<thead align="left">
+												<tr>
+													  <th class="firstcol" align="left" valign="top" width="*">模式参数</th>
+													  <th valign="top" width="*" class="invisible">M</th>
+								                      <th valign="top" width="*" class="invisible">C</th>
+													  <th class="invisible" valign="top" width="*">缺省值</th>
+													  <th valign="top" width="*">描述
+</th>
+												</tr>
+											</thead>
+											<tbody>
+
+														<tr>
+															<th align="left" valign="top" width="*" class="firstcol">
+																Integration Bus 服务名称
+															</th>
+															<td valign="top" width="*" class="invisible">是
+</td>
+									                        <td valign="top" width="*" class="invisible">是
+</td>
+									                        <td valign="top" width="*" class="invisible">&nbsp;</td>
+																				
+															
+															<td valign="top" width="*">
+																<p>这是一个向导对话框，用于创建新服务或使用现有服务来实现 BPM Integration Service。</p>
+															</td>
+														</tr>
+											</tbody>
+										</table>
+								  	</div>
+								
+
+
+						  	</div>
+						  	
+
+						  
+						  	
+				  		</div>
+			  		</div>
+				</div>
+			</div>
+
+	<div id="footnotes" class="invisible">
+		<div class="box first">
+			<div class="TitleBox"><!-- --></div>
+			<div class="FooterBox"><!-- --></div>
+			<div class="TL"><!-- --></div>
+			<div class="TR"><!-- --></div>
+			<div class="BL"><!-- --></div>
+			<div class="BR"><!-- --></div>
+			<div class="ContentBox">
+				<div class="invisible" >
+					
+				<p>列出所有模式参数及其缺省值。
+</p>
+                <p>标题为 <b>M</b> 的列指示属性是否为<dfn class="term">必需的</dfn>。
+				标题为 <b>C</b> 的列指示属性是否为<dfn class="term">可配置的</dfn>，也就是说，可以在将消息流添加到 IBM Integration Bus 归档 (BAR) 文件时更改值。</p>
+				<p>未表明缺省值时，缺省值是空字符串。
+</p>
+				
+				<a href="overview.htm#anchorBack" title="返回">返回至 BPM Integration Service 模式规范</a><p></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

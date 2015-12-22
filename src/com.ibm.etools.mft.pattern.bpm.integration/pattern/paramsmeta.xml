@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<povs xmlns:patterns="http://www.ibm.com/patterns">
+    <simplePov
+        groupId="com.ibm.etools.mft.pattern.bpm.integration.pattern.instanceName" name="instanceName"/>
+    <simplePov editorId="EditorId1399d05d52b6cf94e49e128fc16"
+        groupId="com.ibm.etools.mft.pattern.bpm.integration.pattern.Id1399d0578e2e91c82f2137046d6" name="ppBPMService">
+        <action type="custom"/>
+    </simplePov>
+    <simplePov editorId="EditorId1399d0f91aaaaadf53af9732ec8"
+        groupId="com.ibm.etools.mft.pattern.bpm.integration.pattern.Id1399d0f1b22f4426ec2ec189952" name="ppServiceName">
+        <action type="custom"/>
+    </simplePov>
+    <Group
+        id="com.ibm.etools.mft.pattern.bpm.integration.pattern.instanceName" visible="false"/>
+    <Group description="description" expand="true"
+        id="com.ibm.etools.mft.pattern.bpm.integration.pattern.Id1399d0578e2e91c82f2137046d6"
+        name="Id1399d0578e2e91c82f2137046d6" visible="true"/>
+    <Group description="description" expand="true"
+        id="com.ibm.etools.mft.pattern.bpm.integration.pattern.Id1399d0f1b22f4426ec2ec189952"
+        name="Id1399d0f1b22f4426ec2ec189952" visible="true"/>
+    <ReferencedProject name="_IntegrationService"/>
+</povs>

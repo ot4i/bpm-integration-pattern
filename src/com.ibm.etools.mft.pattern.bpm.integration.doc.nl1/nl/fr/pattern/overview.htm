@@ -1,0 +1,86 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="fr-fr">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+    <title>Présentation du modèle Service d'intégration BPM</title>
+</head>
+    <body>
+        <h1 class="topictitle1">Modèle Service d'intégration de Business Process Manager</h1>
+        <div>
+            <p class="shortdesc"></p>
+        </div>
+        <p>Ce modèle permet d'intégrer un service d'intégration IBM Business Process Manager (BPM) à un service
+        IBM Integration Bus.</p>
+        
+        <div class="section">
+            <h2 class="sectiontitle">Solution</h2>
+        </div>
+        
+        <p>Ce modèle permet de générer un nouveau service IBM Integration Bus qui peut être appelé par
+        IBM Business Process Manager.
+		</p>
+		<p>Avant d'utiliser ce modèle, prenez connaissance des informations relatives à IBM Business Process Manager contenues dans le centre de documentation IBM Integration Bus, voir <a class="xref" href="../../com.ibm.etools.mft.doc/bz49020_.htm" title="Working with Business Process Manager">Working with Business Process Manager</a>
+		</p>
+		
+<div class="image">		
+<img src="../images/BPMpatterndiag1.gif" alt="Organigramme du modèle de service d'intégration BPM."/>
+</div>
+<p>Les développeurs BPM et IBM Integration Bus travaillent ensemble pour intégrer un service d'intégration IBM BPM à un service
+IBM Integration Bus en procédant comme suit : </p> 
+<p>Le développeur BPM doit tout d'abord exécuter les tâches suivantes :
+</p><ol>
+<li>A l'aide d'un kit d'outils BPM, créer ou identifier le service d'intégration BPM devant appeler le service IBM Integration Bus.</li>
+<li>Créer un export BPM (fichier <span class="filepath">.twx</span>) contenant un ou plusieurs services d'intégration
+avec des variables d'entrée et de sortie définies. </li></ol>
+<p>Le développeur IBM Integration Bus doit ensuite exécuter les tâches suivantes :
+</p><ol>
+<li>Générer une nouvelle instance de modèle en sélectionnant le service d'intégration BPM requis à partir  du fichier <span class="filepath">.twx</span>.
+<p>
+Le service IBM Integration Bus généré contient une interface de service (fichier WSDL) qui comporte une opération avec des entrées et des sorties correspondant à la définition du service d'intégration BPM.</p></li>
+<li>Développer le service IBM Integration Bus, le déployer sur un noeud d'intégration (courtier) et vérifier qu'il fonctionne correctement. </li>
+<li>Exporter le service en tant que nouveau fichier <span class="filepath">.twx</span>. </li>
+<p>Le nouveau fichier <span class="filepath">.twx</span> contient des détails sur le nouveau service sous la forme d'une
+implémentation d'une intégration BPM Web Service incluant l'adresse URL du service et un mappage d'objet métier approprié. </p>
+</ol>
+<p>Enfin, le développeur BPM doit exécuter les tâches suivantes :</p>
+<ol>
+<li>A l'aide du kit d'outils BPM utilisé pour créer le service d'intégration BPM, importer le nouveau fichier
+<span class="filepath">.twx</span>.</li>
+<p>Le service d'intégration BPM est mis à jour avec les détails du service IBM Integration Bus. Il peut maintenant appeler le service
+IBM Integration Bus.
+</p></ol>
+
+<br />
+
+
+<p>Pour plus d'informations sur l'application et l'utilisation de ce modèle, consultez les sections suivantes.</p>
+		<div class="familylinks">
+			<a name="anchorBack"></a>
+			<div class="section">
+				<h2 class="sectiontitle">Tâches connexes</h2>
+			</div>
+		</div>
+		
+		<div>
+			<a href="before.htm">Tâches à exécuter avant d'appliquer le modèle</a>
+		</div>
+		<div>
+			<a href="Configure.htm">Appliquer et configurer le modèle</a>
+		</div>
+		<div>
+			<a href="parameters.htm">Paramètres destinés au modèle</a>
+		</div>
+		<div>
+			<a href="constraint.htm">Contraintes d'utilisation du modèle</a>
+		</div>
+		<div>
+			<a href="after.htm">Tâches à exécuter après avoir généré le modèle</a>
+		</div>
+    </body>
+</html>

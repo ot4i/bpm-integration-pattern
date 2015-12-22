@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-tw" xml:lang="zh-tw">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+    <title>BPM Integration Service 型樣概觀</title>
+</head>
+    <body>
+        <h1 class="topictitle1">Business Process Manager Integration Service 型樣</h1>
+        <div>
+            <p class="shortdesc"></p>
+        </div>
+        <p>您可以使用此型樣來將 IBM Business Process Manager (BPM) 整合服務與 IBM Integration Bus 服務相整合。</p>
+        
+        <div class="section">
+            <h2 class="sectiontitle">解決方案</h2>
+        </div>
+        
+        <p>您可以使用此型樣來產生可由 IBM Business Process Manager 呼叫的新 IBM Integration Bus 服務。</p>
+		<p>在使用此型樣之前，請讀取 IBM Integration Bus 資訊中心內 IBM Business Process Manager 的相關資訊；請參閱<a class="xref" href="../../com.ibm.etools.mft.doc/bz49020_.htm" title="使用 Business Process Manager">使用 Business Process Manager</a>
+		    </p>
+		
+<div class="image">		
+<img src="../images/BPMpatterndiag1.gif" alt="BPM 整合服務型樣流程圖。"/>
+</div>
+<p>BPM 和 IBM Integration Bus 開發者協作完成下列步驟，以將 IBM BPM 整合服務與 IBM Integration Bus 服務相整合：</p> 
+<p>首先，BPM 開發者必須完成下列作業：
+</p><ol>
+<li>使用 BPM 工具箱，建立或識別需要呼叫 IBM Integration Bus 服務的 BPM 整合服務。</li>
+<li>建立包含一或多個整合服務（已定義輸入與輸出變數）的 BPM 匯出檔（<span class="filepath">.twx</span> 檔）。</li></ol>
+<p>下一步，IBM Integration Bus 開發者必須完成下列作業：
+</p><ol>
+<li>從 <span class="filepath">.twx</span> 檔選取必要的 BPM 整合服務，來產生新的型樣實例。
+<p>
+所產生的 IBM Integration Bus 服務包含一個服務介面（WSDL 檔），該介面的作業包含對應於 BPM 整合服務定義的輸入及輸出。</p></li>
+<li>開發 IBM Integration Bus 服務，將服務部署到整合節點（分配管理系統），並驗證該服務運作正確。</li>
+<li>將服務匯出為新的 <span class="filepath">.twx</span> 檔。</li>
+<p>新的 <span class="filepath">.twx</span> 檔包含新服務的詳細資料，形式為實作包含服務 URL 與對映商業物件對映的 BPM Web 服務。</p>
+</ol>
+<p>最後，BPM 開發者必須完成下列作業：</p>
+<ol>
+<li>使用用來建立 BPM 整合服務的 BPM 工具箱，匯入新的 <span class="filepath">.twx</span> 檔。</li>
+<p>BPM 整合服務將更新為 IBM Integration Bus 服務的詳細資料。現在，BPM 整合服務將呼叫 IBM Integration Bus 服務。</p></ol>
+
+<br />
+
+
+<p>如需如何套用及使用此型樣的相關資訊，請閱讀下節。</p>
+		<div class="familylinks">
+			<a name="anchorBack"></a>
+			<div class="section">
+				<h2 class="sectiontitle">相關作業</h2>
+			</div>
+		</div>
+		
+		<div>
+			<a href="before.htm">套用型樣之前要完成的作業</a>
+		</div>
+		<div>
+			<a href="Configure.htm">套用並配置型樣</a>
+		</div>
+		<div>
+			<a href="parameters.htm">型樣的參數</a>
+		</div>
+		<div>
+			<a href="constraint.htm">使用型樣的限制</a>
+		</div>
+		<div>
+			<a href="after.htm">產生型樣之後要完成的作業</a>
+		</div>
+    </body>
+</html>

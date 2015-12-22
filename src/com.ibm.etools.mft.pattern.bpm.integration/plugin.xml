@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+<plugin>
+    <extension point="org.eclipse.jet.transform">
+        <transform startTemplate="templates/main.jet" templateLoaderClass="org.eclipse.jet.compiled._jet_transformation">
+            <description>%Plugin.description</description>
+            <tagLibraries>
+                <importLibrary autoImport="true"
+                    id="org.eclipse.jet.controlTags" usePrefix="c"/>
+                <importLibrary autoImport="true"
+                    id="org.eclipse.jet.javaTags" usePrefix="java"/>
+                <importLibrary autoImport="true"
+                    id="org.eclipse.jet.formatTags" usePrefix="f"/>
+                <importLibrary autoImport="false"
+                    id="org.eclipse.jet.workspaceTags" usePrefix="ws"/>
+            </tagLibraries>
+        </transform>
+    </extension>
+    <extension point="com.ibm.etools.patterns.Pattern">
+        <resourceloader
+            class="com.ibm.etools.mft.pattern.bpm.integration.pattern.PatternMessages" id="com.ibm.etools.mft.pattern.bpm.integration.pattern"/>
+        <pattern
+            doc="com.ibm.etools.mft.pattern.bpm.integration.doc/pattern/overview.htm"
+            id="com.ibm.etools.mft.pattern.bpm.integration.pattern"
+            name="%com.ibm.etools.mft.pattern.bpm.integration.pattern.displayName"
+            parentPatternId="categories.Id1399d053e6a802ffe54c6d2cf38"
+            povMetaXML="pattern/paramsmeta.xml"
+            povSchema="pattern/params.xsd"
+            povdoc="com.ibm.etools.mft.pattern.bpm.integration.doc/pattern/parameters.htm"
+            productId="com.ibm.etools.msgbroker.tooling.ide"
+            resourceLoaderId="com.ibm.etools.mft.pattern.bpm.integration.pattern" transformId="com.ibm.etools.mft.pattern.bpm.integration"/>
+        <pattern
+            doc="com.ibm.etools.mft.pattern.bpm.integration.doc/categories/Id1399d053e6a802ffe54c6d2cf38/overview.htm"
+            id="categories.Id1399d053e6a802ffe54c6d2cf38"
+            name="%categories.Id1399d053e6a802ffe54c6d2cf38.displayName"
+            parentPatternId="com.ibm.etools.mft.pattern.eis" productId="com.ibm.etools.msgbroker.tooling.ide"/>
+            
+         <pattern doc="com.ibm.etools.mft.pattern.bpm.integration.doc/parent_category/overview.htm" id="com.ibm.etools.mft.pattern.eis"
+            name="%com.ibm.etools.mft.pattern.eis.displayName" parentPatternId="com.ibm.etools.pattern" productId="com.ibm.etools.msgbroker.tooling.ide"/>
+            
+    </extension>
+    <extension point="org.eclipse.wst.xml.core.catalogContributions">
+        <catalogContribution id="default">
+            <public
+                publicId="com.ibm.etools.mft.pattern.bpm.integration.pattern" uri="pattern/params.xsd"/>
+        </catalogContribution>
+    </extension>
+    <extension id="EditorId1399d05d52b6cf94e49e128fc16" point="com.ibm.etools.patterns.ui.PatternEditorTypeContributor">
+        <EditorContributor
+            EditorId="EditorId1399d05d52b6cf94e49e128fc16"
+            EditorImpl="com.ibm.etools.mft.pattern.support.edit.extensions.custom.UserDefinedPropertyEditor"
+            PluginId="com.ibm.etools.mft.pattern.support.edit"
+            argSeparator="," arguments="com.ibm.etools.mft.pattern.bpm.integration.code|com.ibm.etools.mft.pattern.bpm.integration.code.editors.BPMServiceEditor||"/>
+    </extension>
+    <extension id="EditorId1399d0f91aaaaadf53af9732ec8" point="com.ibm.etools.patterns.ui.PatternEditorTypeContributor">
+        <EditorContributor
+            EditorId="EditorId1399d0f91aaaaadf53af9732ec8"
+            EditorImpl="com.ibm.etools.mft.pattern.support.edit.extensions.custom.UserDefinedPropertyEditor"
+            PluginId="com.ibm.etools.mft.pattern.support.edit"
+            argSeparator="," arguments="com.ibm.etools.mft.pattern.bpm.integration.code|com.ibm.etools.mft.pattern.bpm.integration.code.editors.ServiceEditor|ppBPMService|"/>
+    </extension>
+</plugin>

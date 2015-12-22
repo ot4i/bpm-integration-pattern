@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-jp" xml:lang="ja-jp">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+	    <title>「BPM 統合サービス」パターンを生成した後に実行するタスク</title>
+	</head>
+	<body>
+	    <h1 class="title topictitle1">「BPM 統合サービス」パターンを生成した後に完了するタスク</h1>
+	    <div>	
+	    
+
+	    
+	     <p>
+	    	「BPM 統合サービス」パターン・インスタンスを生成した後、以下のステップを実行します。</p> 
+     	<ol>
+     	<li>メッセージ・フローを使用してサービス操作を実装します。
+     	<p>メッセージ・フローの開発については、<a class="xref" href="../../com.ibm.etools.mft.doc/bi12005_.htm" title="メッセージ・フローの開発">メッセージ・フローの開発</a>を参照してください。</p></li>
+     	<li>サービスをブローカー・アーカイブ・ファイル (BAR) に追加します。
+     	    <ol>
+     	       <li><span class="uicontrol">「ファイル」>「新規」>「BAR ファイル」</span>をクリックします。</li>
+     	       <li>                    サービスの名前を入力するか、または表示されているリストから 1 つを選択します。リストは、アクティブ作業セットのプロジェクトのみを表示するようにフィルタリングされています。
+</li>
+     	       <li>作成する BAR ファイルの名前を入力します。</li>
+     	       <li><span class="uicontrol">「終了」</span>をクリックします。
+拡張子が <span class="filepath">.bar</span> のファイルが作成され、「ナビゲーター」ビューで「ブローカー・アーカイブ」フォルダーの下に表示されます。BAR ファイルの「内容」エディターが開きます。</li>
+     	       <li>「準備」タブで、生成されたサービスを選択して BAR ファイルに追加します。</li>
+     	       <li><span class="uicontrol">「ビルドして保存」</span>をクリックして、BAR ファイルを作成します。</li> 
+     	       </ol>
+     	</li>
+     	<li><b>オプション:</b> 作成した BAR ファイルを構成します。
+BAR ファイル内のメッセージ・フローの構成作業は、「BPM 統合サービス」パターン・インスタンス用のメッセージ・フローをデプロイする前に行わなくても構いません。
+後で、使用環境に応じてデフォルト・オプションを変更することができます。</li>
+     	<li>BAR ファイルを統合サーバー (実行グループ) にデプロイします。</li>
+     	<li>「アプリケーション開発」ナビゲーターで、サービスの<span class="uicontrol">「統合サービス記述」</span>を右クリックし、<span class="uicontrol">「統合サービスのエクスポート」>「IBM Business Process Manager」</span>をクリックします。
+「デプロイ済みサービスの選択」ウィンドウが開きます。</li>
+     	<li>サービスのホスト名またはリスナー・ポートを変更することもできますし、デフォルトを受け入れることもできます。その後で、<span class="uicontrol">「次へ」</span>をクリックします。
+「IBM Business Process Manager スナップショットのエクスポート」ウィンドウが開きます。</li>
+     	<li>新規スナップショットの名前とファイル・パスを入力して、<span class="uicontrol">「終了」</span>をクリックします。
+スナップショットが新規 <span class="filepath">.twx</span> ファイルとして保存されます。</li>
+     	<li>BPM 統合サービスの作成に使用した BPM ツールキットを使用して、新規 <span class="filepath">.twx</span> ファイルをインポートします。IBM Integration Bus サービスの詳細に基づいて BPM 統合サービスが更新されます。</li>
+     	<p>これで、BPM 統合サービスが IBM Integration Bus サービスを呼び出せるようになりました。</p>
+  		</ol>
+		</div>
+		<a href="overview.htm#after">「BPM 統合サービス」パターンの仕様に戻る</a>
+	</body>
+</html>

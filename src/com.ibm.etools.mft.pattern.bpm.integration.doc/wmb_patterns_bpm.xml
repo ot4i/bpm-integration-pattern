@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS  TYPE="org.eclipse.help.toc"?>
+<toc link_to="toc.xml#wmb_patterns_bpm" label="BPM Integration Service" topic="categories/Id137f112208d3903071911e50ff4/overview.htm">
+   <topic href="pattern/overview.htm" label="BPM Integration Service">
+      <topic href="pattern/before.htm" label="Topics to complete before completing the pattern">
+       </topic>
+      <topic href="pattern/Configure.htm" label="Apply and configure the patten">
+       </topic>
+      <topic href="pattern/parameters.htm" label="Parameters for the pattern">
+       </topic>
+      <topic href="pattern/constraint.htm" label="Constraints on using the pattern">
+       </topic>
+      <topic href="pattern/after.htm" label="Tasks to complete after generating the pattern">
+       </topic>
+     </topic>
+</toc>

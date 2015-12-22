@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS  TYPE="org.eclipse.help.toc"?>
+<toc link_to="../com.ibm.etools.mft.pattern.eis.doc/toc.xml#wmb_patterns_bpm" label="Integración de BPM" topic="categories/Id1399d053e6a802ffe54c6d2cf38/overview.htm">
+	<topic label="Integración de BPM" href="categories/Id1399d053e6a802ffe54c6d2cf38/overview.htm">
+		<topic label="Servicio de integración de BPM
+" href="pattern/overview.htm">
+    		<topic label="Tareas que deben completarse antes de aplicar el patrón" href="pattern/before.htm"/>
+    		<topic label="Aplicar y configurar el patrón.
+" href="pattern/Configure.htm"/>
+  	   	 	<topic label="Parámetros para el patrón
+" href="pattern/parameters.htm"/> 
+    		<topic label="Restricciones en el uso del patrón " href="pattern/constraint.htm"/>
+    		<topic label="Tareas que deben completarse después de generar el patrón" href="pattern/after.htm"/>    	   	
+		</topic>
+	</topic>
+</toc>

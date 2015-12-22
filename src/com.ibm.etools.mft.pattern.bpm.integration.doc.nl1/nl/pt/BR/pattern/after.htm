@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="pt-br">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+	    <title>Tarefas a serem concluídas depois da geração do padrão do Serviço de Integração do BPM</title>
+	</head>
+	<body>
+	    <h1 class="title topictitle1">Tarefas a serem concluídas depois da geração do padrão do Serviço de Integração do BPM</h1>
+	    <div>	
+	    
+
+	    
+	     <p>
+	    	Após a geração da instância padrão do BPM Integration Service, conclua as etapas a seguir:</p> 
+     	<ol>
+     	<li>Implemente a operação de serviço usando um fluxo de mensagens. 
+     	<p>Para obter informações sobre como desenvolver fluxos de mensagens, consulte
+     	<a class="xref" href="../../com.ibm.etools.mft.doc/bi12005_.htm" title="Desenvolvendo Fluxos de Mensagens">Desenvolvendo Fluxos de Mensagens</a>.</p></li>
+     	<li>Inclua o serviço em um arquivo bar (BAR).
+     	    <ol>
+     	       <li>Clique em <span class="uicontrol">Arquivo > Novo > Arquivo BAR</span>. </li>
+     	       <li>Insira o nome do serviço ou selecione um na lista exibida. 
+     	       A
+				lista é filtrada para mostrar apenas projetos no conjunto de trabalhos ativo. </li>
+     	       <li>Insira um nome para o arquivo BAR sendo criado. </li>
+     	       <li>Clique em <span class="uicontrol">Concluir</span>. Um arquivo com uma extensão <span class="filepath">.bar</span> é criado e exibido na visualização
+                    do Navegador, na pasta Broker Archives. O Editor de Conteúdo do arquivo BAR é aberto. </li>
+     	       <li>Na guia Preparar, selecione o serviço gerado para incluir no arquivo BAR.</li>
+     	       <li>Clique em <span class="uicontrol">Construir e Salvar</span> para criar seu arquivo BAR.</li> 
+     	       </ol>
+     	</li>
+     	<li><b>Opcional:</b> Configure o arquivo BAR criado. Você não é obrigado a configurar o fluxo de mensagens
+     	    no arquivo BAR antes de implementar os fluxos de mensagens para a instância padrão do BPM Integration
+     	    Service. Posteriormente, talvez você queira alterar algumas opções padrão, dependendo do seu ambiente. </li>
+     	<li>Implemente o arquivo BAR em um servidor de integração (grupo de execução).</li>
+     	<li>No navegador Desenvolvimento de Aplicativo, clique com o botão direito do mouse em <span class="uicontrol">Descrição do       Serviço de Integração</span> em seu serviço e clique em <span class="uicontrol">Exportar Serviço de Integração > IBM Business       Process Manager</span>. 
+     	A janela Selecionar Serviço Implementado é aberta.</li>
+     	<li>É possível alterar o nome do host ou a porta do listener para o serviço, ou aceitar os padrões, e
+     	clicar em <span class="uicontrol">Avançar</span>. A janela Exportar Captura Instantânea do IBM Business Process Manager é aberta.</li>
+     	<li>Insira um nome e um caminho de arquivo para a nova captura instantânea e clique em <span class="uicontrol">Concluir</span>. A captura instantânea é salva como um novo arquivo <span class="filepath">.twx</span>.</li>
+     	<li>Usando o kit de ferramentas do BPM que foi usado para criar o serviço de integração do BPM, importe o novo arquivo
+     	<span class="filepath">.twx</span>. O serviço de integração do BPM é atualizado com os detalhes do serviço IBM Integration
+      Bus.</li>
+     	<p>O serviço de integração do BPM agora pode chamar o serviço IBM Integration Bus.</p>
+  		</ol>
+		</div>
+		<a href="overview.htm#after">Voltar para a especificação padrão do Serviço de Integração do BPM</a>
+	</body>
+</html>

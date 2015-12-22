@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de-de" xml:lang="de-de">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+	    <title>Erforderliche Tasks nach der Generierung des Musters 'BPM Integration Service'</title>
+	</head>
+	<body>
+	    <h1 class="title topictitle1">Erforderliche Tasks nach der Generierung des Musters 'BPM Integration Service'</h1>
+	    <div>	
+	    
+
+	    
+	     <p>
+Führen Sie nach der Generierung einer Instanz des Musters 'BPM Integration Service' die folgenden Schritte aus:
+</p> 
+     	<ol>
+     	<li>Implementieren Sie die Serviceoperation mit einem Nachrichtenfluss.
+     	<p>Sie finden Informationen zur Entwicklung von Nachrichtenflüssen im Abschnitt <a class="xref" href="../../com.ibm.etools.mft.doc/bi12005_.htm" title="Nachrichtenflüsse entwickeln">Nachrichtenflüsse entwickeln</a>.</p></li>
+     	<li>Fügen Sie den Service einer Brokerarchivdatei (BAR-Datei) hinzu.
+     	    <ol>
+     	       <li>Klicken Sie auf <span class="uicontrol">Datei > Neu > BAR-Datei</span>. </li>
+     	       <li>Geben Sie den Namen Ihres Service ein oder wählen Sie einen aus der angezeigten Liste aus. 
+     	       Die Liste ist gefiltert. Sie zeigt nur die Projekte des aktiven Arbeitsbereichs an. </li>
+     	       <li>Geben Sie einen Namen für die zu erstellende Brokerarchivdatei ein. </li>
+     	       <li>Klicken Sie auf <span class="uicontrol">Fertigstellen</span>. Eine Datei mit der Erweiterung <span class="filepath">.bar</span> wird erstellt und in der Navigatoransicht im Ordner 'Brokerarchive' angezeigt. Der Inhaltseditor für die Brokerarchivdatei wird geöffnet. </li>
+     	       <li>Wählen Sie auf der Registerkarte 'Prepare' (Vorbereiten) den generierten Service aus, um ihn Ihrer BAR-Datei hinzuzufügen. </li>
+     	       <li>Klicken Sie auf <span class="uicontrol">Build and Save</span> (Erstellen und Speichern), um Ihre BAR-Datei zu erstellen.</li> 
+     	       </ol>
+     	</li>
+     	<li><b>Optional:</b> Konfigurieren Sie die erstellte BAR-Datei. Vor der Implementierung der Nachrichtenflüsse für Ihre Instanz des Musters 'BPM Integration Service' ist keine weitere Konfiguration des Nachrichtenflusses in der BAR-Datei erforderlich. Die Standardoptionen können Sie auch später noch an Ihre Umgebung anpassen. </li>
+     	<li>Implementieren Sie die BAR-Datei auf einem Integrationsserver (Ausführungsgruppe). </li>
+     	<li>Klicken Sie im Navigator der Anwendungsentwicklung mit der rechten Maustaste auf eine <span class="uicontrol">Beschreibung des Integrationsservice</span> und klicken Sie auf <span class="uicontrol">Export Integration Service > IBM Business Process Manager</span> (Integrationsservice exportieren > IBM Business Process Manager). Daraufhin wird ein Fenster für die Auswahl des implementierten Service geöffnet.
+</li>
+     	<li>Sie können den Hostnamen oder Listener-Port für den Service ändern oder die Standardwerte akzeptieren. Klicken Sie dann auf <span class="uicontrol">Next</span> (Weiter). Daraufhin wird ein Fenster für den Export der IBM Business Process Manager-Momentaufnahme geöffnet.
+</li>
+     	<li>Geben Sie einen Namen und einen Dateipfad für die neue Momentaufnahme ein und klicken Sie auf <span class="uicontrol">Finish</span> (Fertigstellen). Die Momentaufnahme wird als neue Datei mit der Erweiterung <span class="filepath">.twx</span> gespeichert.</li>
+     	<li>Importieren Sie unter Verwendung des BPM-Toolkits, mit dem der BPM-Integrationsservice erstellt wurde, die neue Datei (<span class="filepath">.twx</span>). Der BPM-Integrationsservice wird aktualisiert und enthält jetzt die Details des IBM Integration Bus-Service. </li>
+     	<p>Der BPM-Integrationsservice kann jetzt den IBM Integration Bus-Service aufrufen.
+</p>
+  		</ol>
+		</div>
+		<a href="overview.htm#after">Zurück zur Spezifikation des Musters 'BPM Integration Service'</a>
+	</body>
+</html>

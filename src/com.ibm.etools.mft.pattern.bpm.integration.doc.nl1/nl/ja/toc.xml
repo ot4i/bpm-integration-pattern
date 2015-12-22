@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?NLS  TYPE="org.eclipse.help.toc"?>
+<toc link_to="../com.ibm.etools.mft.pattern.eis.doc/toc.xml#wmb_patterns_bpm" label="BPM 統合" topic="categories/Id1399d053e6a802ffe54c6d2cf38/overview.htm">
+	<topic label="BPM 統合" href="categories/Id1399d053e6a802ffe54c6d2cf38/overview.htm">
+		<topic label="BPM 統合サービス" href="pattern/overview.htm">
+    		<topic label="パターンを適用する前に完了するタスク" href="pattern/before.htm"/>
+    		<topic label="パターンの適用および構成" href="pattern/Configure.htm"/>
+  	   	 	<topic label="パターンのパラメーター" href="pattern/parameters.htm"/> 
+    		<topic label="パターンの使用に関する制約" href="pattern/constraint.htm"/>
+    		<topic label="パターンを生成した後に完了するタスク" href="pattern/after.htm"/>    	   	
+		</topic>
+	</topic>
+</toc>

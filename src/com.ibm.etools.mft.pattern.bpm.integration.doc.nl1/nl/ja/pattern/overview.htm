@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja-jp" xml:lang="ja-jp">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+    <title>「BPM 統合サービス」パターンの概要</title>
+</head>
+    <body>
+        <h1 class="topictitle1">「Business Process Manager 統合サービス」パターン</h1>
+        <div>
+            <p class="shortdesc"></p>
+        </div>
+        <p>このパターンを使用して、IBM Business Process Manager (BPM) 統合サービスと IBM Integration Bus サービスを統合できます。</p>
+        
+        <div class="section">
+            <h2 class="sectiontitle">ソリューション</h2>
+        </div>
+        
+        <p>このパターンを使用すると、IBM Business Process Manager から呼び出せる新規 IBM Integration Bus サービスを生成することができます。
+</p>
+		<p>このパターンを使用する前に、IBM Integration Bus インフォメーション・センターで IBM Business Process Manager に関する情報をお読みください (<a class="xref" href="../../com.ibm.etools.mft.doc/bz49020_.htm" title="Business Process Manager との連動">Business Process Manager との連動</a>を参照)。
+</p>
+		
+<div class="image"><img src="../images/BPMpatterndiag1.gif" alt="「BPM 統合サービス」パターン・フローの図。"/>
+</div>
+<p>BPM 開発者と IBM Integration Bus 開発者が協働して以下のステップを実行して、IBM BPM 統合サービスと IBM Integration Bus サービスを統合します。</p> 
+<p>まず、BPM 開発者が次のタスクを完了する必要があります。
+</p><ol>
+<li>BPM ツールキットを使用して、IBM Integration Bus サービスを呼び出す必要がある BPM 統合サービスを作成または特定します。</li>
+<li>入力および出力の変数が定義された統合サービスが 1 つ以上含まれる BPM エクスポート (<span class="filepath">.twx</span> ファイル) を作成します。
+</li></ol>
+<p>次に、IBM Integration Bus 開発者が次のタスクを完了する必要があります。
+</p><ol>
+<li><span class="filepath">.twx</span> ファイルから必要な BPM 統合サービスを選択することによって、新規パターン・インスタンスを生成します。
+<p>
+生成された IBM Integration Bus サービスには、BPM 統合サービス定義に対応した入力と出力を使用する操作を備えたサービス・インターフェース (WSDL ファイル) が格納されます。</p></li>
+<li>IBM Integration Bus サービスを開発し、そのサービスを統合ノード (ブローカー) にデプロイして、サービスが正常に機能することを確認します。</li>
+<li>サービスを新規 <span class="filepath">.twx</span> ファイルとしてエクスポートします。</li>
+<p>新規 <span class="filepath">.twx</span> ファイルには、サービス URL と該当ビジネス・オブジェクトのマッピングが組み込まれた BPM Web サービス統合の実装の形式で新規サービスの詳細が格納されます。</p>
+</ol>
+<p>最後に、BPM 開発者が次のタスクを完了する必要があります。</p>
+<ol>
+<li>BPM 統合サービスの作成に使用した BPM ツールキットを使用して、新規 <span class="filepath">.twx</span> ファイルをインポートします。</li>
+<p>IBM Integration Bus サービスの詳細に基づいて BPM 統合サービスが更新されます。
+これで、BPM 統合サービスが IBM Integration Bus サービスを呼び出せるようになりました。</p></ol>
+
+<br />
+
+
+<p>このパターンを適用して使用する方法については、以下のセクションをお読みください。</p>
+		<div class="familylinks">
+			<a name="anchorBack"></a>
+			<div class="section">
+				<h2 class="sectiontitle">関連タスク</h2>
+			</div>
+		</div>
+		
+		<div>
+			<a href="before.htm">パターンを適用する前に完了するタスク</a>
+		</div>
+		<div>
+			<a href="Configure.htm">パターンの適用および構成</a>
+		</div>
+		<div>
+			<a href="parameters.htm">パターンのパラメーター</a>
+		</div>
+		<div>
+			<a href="constraint.htm">パターンの使用に関する制約</a>
+		</div>
+		<div>
+<a href="after.htm">パターンを生成した後に完了するタスク</a></div>
+    </body>
+</html>
