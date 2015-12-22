@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-us" xml:lang="en-us">
+	<head>
+	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+	    <meta name="copyright" content="Copyright IBM Corporation 2013"/>
+	    <link rel="stylesheet" type="text/css" href="./css/pattern.css"/>
+	    <!-- 
+	    (C) COPYRIGHT International Business Machines Corp., 2013
+	    All Rights Reserved * Licensed Materials - Property of IBM
+	    -->
+	    <title>Tasks to complete after generating the BPM Integration Service pattern</title>
+	</head>
+	<body>
+	    <h1 class="title topictitle1">Tasks to complete after generating the BPM Integration Service pattern</h1>
+	    <div>	
+	    
+
+	    
+	     <p>
+	    	After generating the BPM Integration Service pattern instance, complete the following steps:</p> 
+     	<ol>
+     	<li>Implement the service operation by using a message flow. 
+     	<p>For information about developing message flows, 
+     	see <a class="xref" href="../../com.ibm.etools.mft.doc/bi12005_.htm" title="Developing message flows">Developing Message Flows</a>.</p></li>
+     	<li>Add the service to a broker archive file (BAR).
+     	    <ol>
+     	       <li>Click <span class="uicontrol">File > New > BAR file</span>. </li>
+     	       <li>Enter the name of your service or select one from the displayed list. 
+     	       The list is filtered to show only projects in the active working set. </li>
+     	       <li>Enter a name for the BAR file that you are creating. </li>
+     	       <li>Click <span class="uicontrol">Finish</span>. A file with a <span class="filepath">.bar</span> extension 
+     	       is created and is displayed in the Navigator view, under the Broker Archives folder. The Content Editor for 
+     	       the BAR file opens. </li>
+     	       <li>On the Prepare tab, select the generated service to add to your BAR file.</li>
+     	       <li>Click <span class="uicontrol">Build and Save</span> to create your BAR file.</li> 
+     	       </ol>
+     	</li>
+     	<li><b>Optional:</b> Configure the BAR file you have created. You are not required to configure the message flow in 
+     	    the BAR file before you deploy the message flows for your BPM Integration Service pattern 
+     	    instance. Later, you might want to change some of the default options depending on your environment. </li>
+     	<li>Deploy the BAR file to an integration server (execution group).</li>
+     	<li>In the Application Development navigator, right-click on <span class="uicontrol">Integration Service Description</span> 
+     	in your service and click <span class="uicontrol">Export Integration Service > IBM Business Process Manager</span>. 
+     	The Select Deployed Service window opens.</li>
+     	<li>You can change the host name or listener port for the service, or accept the defaults, 
+     	and click <span class="uicontrol">Next</span>. The Export IBM Business Process Manager Snapshot window opens.</li>
+     	<li>Enter a name and file path for the new snapshot and click <span class="uicontrol">Finish</span>. The snapshot is saved 
+     	as a new <span class="filepath">.twx</span> file.</li>
+     	<li>Using the BPM toolkit that was used to create the BPM integration service, import the 
+     	new <span class="filepath">.twx</span> file.The BPM integration service is updated with the 
+     	details of the IBM Integration Bus service.</li>
+     	<p>The BPM integration service can now call the IBM Integration Bus service.</p>
+  		</ol>
+		</div>
+		<a href="overview.htm#after">Back to the BPM Integration Service pattern specification</a>
+	</body>
+</html>
